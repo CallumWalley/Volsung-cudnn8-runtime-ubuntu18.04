@@ -91,7 +91,7 @@ From: nvidia/cuda:11.0-cudnn8-devel-ubuntu18.04
 
   # update databases
   update-mime-database /usr/share/mime
-  update-desktop-database /usr/share/desktop
+  update-desktop-database /usr/share/desktop || true
 
   # update associations
   xdg-mime default volsung-brynhild.desktop application/x-brynhild
