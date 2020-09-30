@@ -26,6 +26,7 @@ From: nvidia/cuda:11.0-cudnn8-devel-ubuntu18.04
       diffuse \
       diffuse \
       git \
+      htop \
       libbotan-2-dev \
       libegl1-mesa \
       libfontconfig1 \
