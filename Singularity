@@ -9,6 +9,8 @@ From: nvidia/cuda:11.0-cudnn8-devel-ubuntu18.04
   export LC_ALL=C
   export LANG="en_US.UTF-8"
   export LANGUAGE="en_US"
+  export TERM="xterm-256color"
+  export TZ="Antarctica/McMurdo"
   
   
   # add CUDA paths
@@ -53,6 +55,8 @@ From: nvidia/cuda:11.0-cudnn8-devel-ubuntu18.04
   # Py packages.
   pip3 install vtk h5py numpy matplotlib xlrd pandas xlrd 
 
+  # Timezone
+  ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
   # add to ciphers
   echo "Ciphers aes128-cbc,3des-cbc,chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com" >> /etc/ssh/ssh_config
