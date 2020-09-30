@@ -18,10 +18,10 @@ From: nvidia/cuda:11.0-cudnn8-devel-ubuntu18.04
 %post
   VOLSUNG_VER=1.13.1
   
-  apt-get update
-  apt-get upgrade
+  apt-get update -y 
+  apt-get upgrade -y
   apt-get install -yq \
-  cmake \
+      cmake \
       curl \
       diffuse \
       diffuse \
