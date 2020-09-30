@@ -23,7 +23,7 @@ From: nvidia/cuda:11.0-cudnn8-devel-ubuntu18.04
   apt-get install -yq \
       cmake \
       curl \
-      diffuse \
+      desktop-file-utils \
       diffuse \
       git \
       htop \
@@ -43,8 +43,10 @@ From: nvidia/cuda:11.0-cudnn8-devel-ubuntu18.04
       python3-dev \
       python3-pip \
       python3-tk \
+      shared-mime-info \
       vim \
-      wget
+      wget \
+      xdg-utils
 
   # Py packages.
   pip3 install vtk h5py numpy matplotlib xlrd pandas xlrd 
