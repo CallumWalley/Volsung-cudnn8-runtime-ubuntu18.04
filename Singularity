@@ -1,8 +1,10 @@
 Bootstrap: docker
 From: nvidia/cuda:11.0-cudnn8-devel-ubuntu18.04
 
+%labels
+  Author CaLLUM wALLEY
+
 %environment
-  # use bash as default shell
   SHELL=/bin/bash
 
   # add CUDA paths
@@ -11,8 +13,6 @@ From: nvidia/cuda:11.0-cudnn8-devel-ubuntu18.04
   LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
   CUDA_HOME="/usr/local/cuda"
 
-  # add Anaconda path
-  PATH="/usr/local/anaconda3/bin:$PATH"
   export PATH LD_LIBRARY_PATH CPATH CUDA_HOME
 
 %post
@@ -29,13 +29,15 @@ From: nvidia/cuda:11.0-cudnn8-devel-ubuntu18.04
     vim
 
   wget https://s3.amazonaws.com/volsung-install-files/volsung-LinuxMint-19.1-v$VOLSUNG_VER.tar.gz
-  tar -xvf volsung-LinuxMint-19-v$VOLSUNG_VER.tar.gz
-  cd volsung-LinuxMint-19-v$VOLSUNG_VER
+  tar -xvf volsung-LinuxMint-19.1-v$VOLSUNG_VER.tar.gz
+  cd volsung-LinuxMint-19.1-v$VOLSUNG_VER
   ./init-ubuntu-18-04
   ./init-ubuntu-remote-18-04
   ./setup-ubuntu-18-04
 
- # cho "\n #Cuda paths \n" >> /environment
+rm -rf volsung-LinuxMint-19.1-v$VOLSUNG_VER.tar.gz
+echo "Yay!"
+ # echo "\n #Cuda paths \n" >> /environment
  # echo 'export CPATH="/usr/local/cuda/include:$CPATH"' >> /environment
  # echo 'export PATH="/usr/local/cuda/bin:$PATH"' >> /environment
  # echo 'export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"' >> /environment
