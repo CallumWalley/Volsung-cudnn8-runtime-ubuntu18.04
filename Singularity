@@ -62,9 +62,9 @@ From: nvidia/cuda:11.0-cudnn8-devel-ubuntu18.04
   mkdir /opt/volsung
 
   # if the folder previously existed clean it of some old, superfluous files
-  rm /opt/volsung/libvtk*-8.2*
-  rm /opt/volsung/libQt*.so.5.11
-  rm /opt/volsung/libQt*.so.5.11.2
+  rm -rf /opt/volsung/libvtk*-8.2*
+  rm -rf /opt/volsung/libQt*.so.5.11
+  rm -rf /opt/volsung/libQt*.so.5.11.2
 
   # copy the new files over
   cp -ra * /opt/volsung
