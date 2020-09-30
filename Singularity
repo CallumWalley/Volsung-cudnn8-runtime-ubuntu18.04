@@ -5,15 +5,17 @@ From: nvidia/cuda:11.0-cudnn8-devel-ubuntu18.04
   Author Callum Walley
 
 %environment
-  SHELL=/bin/bash
-
+  export SHELL=/bin/bash
+  export LC_ALL=C
+  export LANG="en_US.UTF-8"
+  export LANGUAGE="en_US"
+  
+  
   # add CUDA paths
-  CPATH="/usr/local/cuda/include:$CPATH"
-  PATH="/usr/local/cuda/bin:$PATH"
-  LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
-  CUDA_HOME="/usr/local/cuda"
-
-  export PATH LD_LIBRARY_PATH CPATH CUDA_HOME
+  export CPATH="/usr/local/cuda/include:$CPATH"
+  export PATH="/usr/local/cuda/bin:$PATH"
+  export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
+  export CUDA_HOME="/usr/local/cuda"
 
 %post
   VOLSUNG_VER=1.13.1
