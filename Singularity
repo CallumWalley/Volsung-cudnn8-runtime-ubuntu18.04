@@ -20,7 +20,7 @@ From: nvidia/cuda:11.0-cudnn8-devel-ubuntu18.04
   export CUDA_HOME="/usr/local/cuda"
 
 %post
-  VOLSUNG_VER=1.13.1
+  VOLSUNG_VER=1.14.2
   
   apt-get update -y 
   apt-get upgrade -y
