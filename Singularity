@@ -21,7 +21,6 @@ From: nvidia/cuda:11.0-cudnn8-devel-ubuntu18.04
 
 %post
   VOLSUNG_VER=1.14.2
-  
   apt-get update -y 
   apt-get upgrade -y
   apt-get install -yq \
@@ -56,7 +55,7 @@ From: nvidia/cuda:11.0-cudnn8-devel-ubuntu18.04
   pip3 install vtk h5py numpy matplotlib xlrd pandas xlrd 
 
   # Timezone
-  ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+  # ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
   # add to ciphers
   echo "Ciphers aes128-cbc,3des-cbc,chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com" >> /etc/ssh/ssh_config
