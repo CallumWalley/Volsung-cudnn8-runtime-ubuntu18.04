@@ -66,7 +66,7 @@ From: nvidia/cuda:11.0-cudnn8-devel-ubuntu18.04
   cd volsung-LinuxMint-19.1-v$VOLSUNG_VER
 
   # create the main installation folder
-  mkdir /etc/timezone
+  # mkdir /etc/timezone
   mkdir /opt/volsung
 
   # if the folder previously existed clean it of some old, superfluous files
