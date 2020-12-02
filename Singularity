@@ -24,6 +24,7 @@ From: nvidia/cuda:11.0-cudnn8-devel-ubuntu18.04
   apt-get update -y 
   apt-get upgrade -y
   apt-get install -yq \
+      openssh-server \
       cmake \
       curl \
       desktop-file-utils \
@@ -50,6 +51,7 @@ From: nvidia/cuda:11.0-cudnn8-devel-ubuntu18.04
       vim \
       wget \
       xdg-utils
+      
 
   # Py packages.
   pip3 install vtk h5py numpy matplotlib xlrd pandas xlrd 
