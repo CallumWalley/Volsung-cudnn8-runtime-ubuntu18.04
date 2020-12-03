@@ -50,7 +50,7 @@ From: nvidia/cuda:11.0-cudnn8-devel-ubuntu18.04
       shared-mime-info \
       vim \
       wget \
-      xfvb \
+      xvfb \
       xdg-utils
       
 
